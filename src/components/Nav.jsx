@@ -9,7 +9,7 @@ const Nav = () => {
         <div className='flex items-center justify-between max-w-7xl mx-auto'>
             <div className='flex justify-center items-center gap-6 txt-color py-4'>
                 <div className='bg-[#F2F4F5] '>
-                    <p className='relative  font-medium text-sm leading-5 flex items-center gap-2 justify-center txt-color py-[14px] pr-6 pl-4'>
+                    <p className='font-medium text-sm leading-5 flex items-center gap-2 justify-center txt-color py-[14px] pr-6 pl-4'>
                         All Category
                         <ChevronDown
                          className='w-4 h-4 text-[#191C1F]'
