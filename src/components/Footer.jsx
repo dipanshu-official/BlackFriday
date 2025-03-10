@@ -19,7 +19,7 @@ const Footer = () => {
     return (
         <div className='bg-[#191C1F]'>
             <div className='max-w-7xl mx-auto   '>
-                <div className='grid grid-cols-5 items-start gap-6 pt-18 justify-center'>
+                <div className='flex  items-start gap-20 pt-18 justify-start'>
 
                     {/* CLICON */}
 
@@ -113,7 +113,7 @@ const Footer = () => {
                     {/* Popular Tag */}
                     <div>
                         <h1 className='font-medium leading-6 uppercase'>Popular Tag</h1>
-                        <div className="flex flex-col items-start justify-start gap-2">
+                        <div className="flex flex-col items-start justify-start gap-2 mt-4">
                             {/* Row 1 */}
                             <div className="flex items-center justify-start  gap-2">
                                 <Card label="Game" />
@@ -123,21 +123,21 @@ const Footer = () => {
                             </div>
 
                             {/* Row 2 */}
-                            <div className="grid grid-cols-3 items-center justify-start  gap-2">
+                            <div className="flex  items-center justify-start  gap-2">
                                 <Card label="Macbook " />
                                 <Card label="SSD" />
                                 <Card label="Graphics Card" />
                             </div>
 
                             {/* Row 3 */}
-                            <div className="grid grid-cols-3 items-center justify-start  gap-2">
+                            <div className="flex items-center justify-start  gap-2">
                                 <Card label="Power Bank " />
                                 <Card label="Smart TV" />
                                 <Card label="Speaker" />
                             </div>
 
                             {/* Row 4 */}
-                            <div className="grid grid-cols-3 items-center justify-start  gap-2">
+                            <div className="flex items-center justify-start  gap-2">
                                 <Card label="Tablet" />
                                 <Card label="Microwave" />
                                 <Card label="Samsung" />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import mainImg from '../assets/Shopping/MainImage.png'
 import img1 from '../assets/Shopping/01.png'
 import img2 from '../assets/Shopping/02.png'
@@ -11,6 +11,7 @@ import img6 from '../assets/Shopping/06.png'
 
 
 const ShowCart = ({ closeCart }) => {
+    const [mainImage, setMainImage] = useState(mainImg)
     return (
         <>
 
@@ -20,15 +21,28 @@ const ShowCart = ({ closeCart }) => {
                 <div className='flex gap-14 '>
                     <div>
                         <div>
-                            <img src={mainImg} alt="" />
+                            <img src={mainImage} alt="" className='h-[464px] w-[616px]' />
                         </div>
-                        <div className='mt-6 flex items-center gap-2'>
-                            <img src={img1} alt="" />
-                            <img src={img2} alt="" />
-                            <img src={img3} alt="" />
-                            <img src={img4} alt="" />
-                            <img src={img5} alt="" />
-                            <img src={img6} alt="" />
+                        <div className='mt-6 flex items-center gap-2 '>
+                            <img src={img1} alt=""
+                                onClick={() => {
+                                    setMainImage(img1)
+                                }} />
+                            <img src={img2} alt="" className='' onClick={() => {
+                                setMainImage(img2)
+                            }} />
+                            <img src={img3} alt="" onClick={() => {
+                                setMainImage(img3)
+                            }} />
+                            <img src={img4} alt="" onClick={() => {
+                                setMainImage(img4)
+                            }} />
+                            <img src={img5} alt="" onClick={() => {
+                                setMainImage(img5)
+                            }} />
+                            <img src={img6} alt="" onClick={() => {
+                                setMainImage(img6)
+                            }} />
 
 
                         </div>

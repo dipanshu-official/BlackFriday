@@ -6,6 +6,8 @@ import Footer from './components/Footer'
 import Product from './components/Product'
 import Hero from './components/Hero'
 import List from './components/List'
+import BestFile from './components/BestFile'
+import Newsletter from './components/Newsletter'
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <Nav/>
       <Hero/>
       <List/>
+      <BestFile/>
+      <Newsletter/>
       <Footer/>
       {/* <Product/> */}
     </div>
