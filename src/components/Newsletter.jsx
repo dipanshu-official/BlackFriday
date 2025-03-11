@@ -41,6 +41,8 @@ const Newsletter = () => {
                 </div>
             </div>
         </div>
+
+        
     )
 }
 

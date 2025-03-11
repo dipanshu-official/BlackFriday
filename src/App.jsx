@@ -8,19 +8,28 @@ import Hero from './components/Hero'
 import List from './components/List'
 import BestFile from './components/BestFile'
 import Newsletter from './components/Newsletter'
+import LatestNews from './components/LatestNews'
+import Mackbook from './components/Mackbook'
+import Xiaomi from './components/Xiaomi'
+import Category from './components/Category'
 
 const App = () => {
   return (
     <div className=''>
-      <Header/>
-      <Navbar/>
-      <Nav/>
-      <Hero/>
-      <List/>
-      <BestFile/>
-      <Newsletter/>
-      <Footer/>
-      {/* <Product/> */}
+      {/* <Header /> */}
+      <Navbar />
+      <Nav />
+      <Hero />
+      <List />
+      <BestFile />
+      <Category/>
+      <Xiaomi/>
+      <Mackbook/>
+      <Product />
+      <LatestNews />
+
+      <Newsletter />
+      <Footer />
     </div>
   )
 }
