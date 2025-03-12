@@ -107,7 +107,7 @@ const Product = () => {
     const heading = ["FLASH SALE TODAY",]
     return (
         <div className='max-w-7xl mx-auto'>
-            <div className='flex items-center p-18 gap-6 '>
+            <div className='flex items-start p-18 gap-6 '>
 
                 {/* item 1 */}
                 <div className='flex flex-col items-start ' >

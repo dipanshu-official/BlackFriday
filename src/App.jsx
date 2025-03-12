@@ -1,37 +1,17 @@
-import React from 'react'
-import Header from './components/Header'
-import Navbar from './components/Navbar'
-import Nav from './components/Nav'
-import Footer from './components/Footer'
-import Product from './components/Product'
-import Hero from './components/Hero'
-import List from './components/List'
-import BestFile from './components/BestFile'
-import Newsletter from './components/Newsletter'
-import LatestNews from './components/LatestNews'
-import Mackbook from './components/Mackbook'
-import Xiaomi from './components/Xiaomi'
-import Category from './components/Category'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage from './pages/Homepage';
+import TrackOrderPage from './pages/TrackOrderPage';
 
 const App = () => {
   return (
-    <div className=''>
-      {/* <Header /> */}
-      <Navbar />
-      <Nav />
-      <Hero />
-      <List />
-      <BestFile />
-      <Category/>
-      <Xiaomi/>
-      <Mackbook/>
-      <Product />
-      <LatestNews />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/TrackOrder" element={<TrackOrderPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
-      <Newsletter />
-      <Footer />
-    </div>
-  )
-}
-
-export default App
+export default App;
