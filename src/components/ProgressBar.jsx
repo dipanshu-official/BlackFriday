@@ -1,38 +1,35 @@
-import React, { useState } from 'react';
-import { Package, Truck, Handshake as HandShake, ClipboardList } from 'lucide-react';
+import React, { useState } from "react";
+import {
+    Package,
+    Truck,
+    Handshake as HandShake,
+    ClipboardList,
+} from "lucide-react";
 
 const ProgressBar = () => {
-    const [currentStatus, setCurrentStatus] = useState('placed');
+    const [currentStatus, setCurrentStatus] = useState("placed");
 
     const steps = [
-        { id: 'placed', title: 'Order Placed', icon: ClipboardList },
-        { id: 'packaging', title: 'Packaging', icon: Package },
-        { id: 'on-road', title: 'On The Road', icon: Truck },
-        { id: 'delivered', title: 'Delivered', icon: HandShake },
+        { id: "placed", title: "Order Placed", icon: ClipboardList },
+        { id: "packaging", title: "Packaging", icon: Package },
+        { id: "on-road", title: "On The Road", icon: Truck },
+        { id: "delivered", title: "Delivered", icon: HandShake },
     ];
 
     const getStepStatus = (stepId) => {
-        const stepOrder = steps.findIndex(step => step.id === stepId);
-        const currentStepOrder = steps.findIndex(step => step.id === currentStatus);
+        const currentIconIndex = steps.findIndex((step) => step.id === stepId);
+        console.log("step id", stepId)
+        console.log("step data", currentIconIndex)
 
-        if (stepOrder < currentStepOrder) return 'completed';
-        if (stepOrder === currentStepOrder) return 'current';
-        return 'upcoming';
+        const currentStepOrder = steps.findIndex(
+            (step) => step.id === currentStatus
+        );
+
+        if (currentIconIndex < currentStepOrder) return "completed";
+        if (currentIconIndex === currentStepOrder) return "current";
+        return "upcoming";
     };
 
-    const handleNextStep = () => {
-        const currentIndex = steps.findIndex(step => step.id === currentStatus);
-        if (currentIndex < steps.length - 1) {
-            setCurrentStatus(steps[currentIndex + 1].id);
-        }
-    };
-
-    const handlePrevStep = () => {
-        const currentIndex = steps.findIndex(step => step.id === currentStatus);
-        if (currentIndex > 0) {
-            setCurrentStatus(steps[currentIndex - 1].id);
-        }
-    };
     return (
         <div className="  flex flex-col items-center justify-center p-4">
             <div className="w-full max-w-3xl mb-8">
@@ -42,8 +39,10 @@ const ProgressBar = () => {
                         <div
                             className="h-full bg-orange-500 transition-all duration-500"
                             style={{
-                                width: `${(steps.findIndex(step => step.id === currentStatus) / (steps.length - 1)) * 100
-                                    }%`
+                                width: `${(steps.findIndex((step) => step.id === currentStatus) /
+                                    (steps.length - 1)) *
+                                    100
+                                    }%`,
                             }}
                         />
                     </div>
@@ -60,18 +59,26 @@ const ProgressBar = () => {
                                         className={`
                     w-16 h-16 rounded-full flex items-center justify-center cursor-pointer
                     transform transition-all duration-300 hover:scale-110
-                    ${status === 'completed' ? 'bg-orange-500 text-white' :
-                                                status === 'current' ? 'bg-orange-500 text-white' :
-                                                    'bg-white border-2 border-gray-200 text-gray-400'}
+                    ${status === "completed"
+                                                ? "bg-orange-500 text-white"
+                                                : status === "current"
+                                                    ? "bg-blue-500 text-white"
+                                                    : "bg-white border-2 border-gray-200 text-gray-400"
+                                            }
                   `}
                                         onClick={() => setCurrentStatus(step.id)}
                                     >
                                         <Icon className="w-8 h-8" strokeWidth={2} />
                                     </div>
-                                    <p className={`
+                                    <p
+                                        className={`
                   mt-3 text-sm font-medium text-center
-                  ${status === 'completed' || status === 'current' ? 'text-gray-900' : 'text-gray-400'}
-                `}>
+                  ${status === "completed" || status === "current"
+                                                ? "text-gray-900"
+                                                : "text-gray-400"
+                                            }
+                `}
+                                    >
                                         {step.title}
                                     </p>
                                 </div>
@@ -81,7 +88,7 @@ const ProgressBar = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ProgressBar
+export default ProgressBar;

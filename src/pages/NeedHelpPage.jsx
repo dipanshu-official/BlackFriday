@@ -17,13 +17,6 @@ const NeedHelp = () => {
 
 
 
-
-
-
-
-
-
-
                 <div className='p-8 bg-[#FBF4CE] flex flex-col items-start gap-6  w-106   '>
                     <div>
 
@@ -67,10 +60,10 @@ const NeedHelp = () => {
 const NeedHelpPage = () => {
     return (
         <div>
-             <Navbar />
-             <Nav />
+            <Navbar />
+            <Nav />
             <NeedHelp />
-            <Footer/>
+            <Footer />
 
         </div>
     )

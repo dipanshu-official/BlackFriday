@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import TrackOrderDetail from './TrackOrderDetail';
+import ProgressBar from './ProgressBar';
 
 const TrackOrder = () => {
     const [showFirst, setShowFirst] = useState(true);

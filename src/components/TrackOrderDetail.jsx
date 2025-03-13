@@ -6,6 +6,7 @@ import img3 from '../assets/TrackOrderDetails/Icon-3.png'
 import img4 from '../assets/TrackOrderDetails/Icon-4.png'
 import img5 from '../assets/TrackOrderDetails/Icon-5.png'
 import clsx from 'clsx'
+import ProgressBar from './ProgressBar'
 
 
 const TrackOrderDetail = () => {
@@ -63,6 +64,8 @@ const TrackOrderDetail = () => {
 
       <div>
         <h1 className='font-medium text-lg leading-6 txt-color my-6'>Order Activity</h1>
+        <ProgressBar />
+
         <div className='flex flex-col items-start gap-4'>
           {items.map((item, index) => (
 
@@ -82,6 +85,7 @@ const TrackOrderDetail = () => {
 
 
         </div>
+
 
       </div>
 
