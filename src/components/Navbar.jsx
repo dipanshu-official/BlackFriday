@@ -13,6 +13,7 @@ import img10 from '../assets/Nav/English.png'
 import img11 from '../assets/Nav/Mandarin.png'
 import img12 from '../assets/Nav/Rusion.png'
 import CustomModal from './ShowModal'
+import { Link } from 'react-router-dom'
 
 
 import { ChevronDown, ChevronUp, Search, Check } from 'lucide-react';
@@ -168,7 +169,7 @@ const Navbar = () => {
 
                         <div className='flex items-center'>
                             <p className='h-8 w-8 rounded-full bg-white'></p>
-                            <h1 className='font-bold leading-10 text-[32px] py-6 '>CLICON</h1>
+                       <Link to='/'>    <h1 className='font-bold leading-10 text-[32px] py-6 '>CLICON</h1></Link> 
                         </div>
                         <div className='bg-white flex items-center py-[14px] px-5  '>
                             <input

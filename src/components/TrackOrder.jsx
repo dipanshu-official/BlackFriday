@@ -34,13 +34,10 @@ const TrackOrder = () => {
                             className='placeholder:text-sm w-full py-3 mt-2 outline-none placeholder:leading-5 placeholder:text-[#77878F] pl-4 txt-color  border border-[#E4E7E9]'
                         />
                     </div>
-                    
-
                 </div>
 
             </div>
             <button onClick={() => {
-                console.log("test call")
               setShowFirst(false)
             }}
             className=' bg-[#FA8232] mt-8 flex items-center gap-2 font-bold uppercase tracking-[1.2%] leading-14 px-8'>

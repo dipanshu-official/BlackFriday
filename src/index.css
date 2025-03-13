@@ -11,3 +11,10 @@ body{
 .txt-color{
   color: #191C1F;
 }
+
+.bg-img{
+  background-image: url(./assets/CustomerSupportPage/HelpCenter/Rectangle16.png);
+  background-size: cover;
+  background-position: center;
+  height: 332px;
+}
